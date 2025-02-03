@@ -164,7 +164,7 @@ int main(int argc, char* argv[])
     
     for (int i = 0; i < n_row1; i++) {
         for (int j = 0; j < n_col2; j++) {
-            fprintf(outputFile, "%ld ", result[i * n_col2 + j]);
+            fprintf(outputFile, j == n_col2 - 1 ? "%ld" : "%ld,", result[i * n_col2 + j]);
         }
         fprintf(outputFile, "\n");
     }
